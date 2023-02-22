@@ -1,9 +1,12 @@
 {
-  "name": "base",
+  "name": "pdfer",
   "version": "1.0.0",
-  "description": "node-js base template no flavors at all",
+  "description": "simple cli to create pdf from folder contains images",
   "type": "module",
-  "keywords": [],
+  "keywords": ["cli", "pdf", "images"],
+  "bin": {
+    "pdfer": "dist/index.js"
+  },
   "main": "dist/index.js",
   "scripts": {
     "start": "node  ./dist/index.js",
@@ -15,11 +18,12 @@
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --config .prettierrc \"src/**/*.ts\" --write"
   },
-  "author": "the-zagy",
+  "author": "nagy-nabil",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/node": "^18.11.18",
+    "@types/pdfkit": "^0.12.8",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "eslint": "^8.33.0",
@@ -30,5 +34,8 @@
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "pdfkit": "^0.13.0"
   }
 }
